@@ -5,6 +5,7 @@ This code is based on: https://gist.github.com/kig/1188381
 
 Usage:
 
+```
   var crew = new WorkCrew("yourScript.js", numWorkers);
 
   var task = {
@@ -13,7 +14,8 @@ Usage:
   ...
   ...
   }
+``
 
-  var workId = service.crew.addWork(task);
+  var workId = crew.addWork(task);
 
 
