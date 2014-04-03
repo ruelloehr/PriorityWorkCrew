@@ -62,10 +62,16 @@ WorkCrew.prototype.processQueue = function() {
 
       this.queue.sort(function (a, b) {
 
-          if (a.work.priority != b.work.priority)
-            return (a.priority - b.priority)
+          if (a.work.priority < b.work.priority)
+            return (-1)
+          else if (a.work.priority > b.work.priority)
+            return (1)
+          else if (a.createTime < b.createTime)
+            return (-1);
+          else if (a.createTime > b.createTime)
+            return (1);
           else
-            return (a.createTime - b.createTime);
+            return (0);
       });
 
 
